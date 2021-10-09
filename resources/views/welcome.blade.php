@@ -13,7 +13,7 @@
                     <br>
 
                     <!-- <img src="{{ asset('white') }}/img/card-primary.png" alt=""> -->
-                    <center><h1 class="card-title">{{ _(' BizScout') }}</h1></center>
+                    <center><h1 class="card-title">BizScout</h1></center>
                 </div>
                 <div class="card-body">
                     <p class="text-dark mb-2"></p>
