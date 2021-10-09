@@ -1,4 +1,4 @@
-@extends('layouts.app', ['class' => 'register-page', 'page' => _('Registe Company'), 'contentClass' => 'register-page'])
+@extends('layouts.app', ['class' => 'register-page', 'page' => __('Registe Company'), 'contentClass' => 'register-page'])
 
 @section('content')
     <div class="row">
@@ -8,9 +8,9 @@
                     <i class="tim-icons icon-chart-bar-32"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ _('Find Leads') }}</h3>
+                    <h3 class="info-title">{{ __('Find Leads') }}</h3>
                     <p class="description">
-                        {{ _('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
+                        {{ __('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
                     </p>
                 </div>
             </div>
@@ -19,9 +19,9 @@
                     <i class="tim-icons icon-mobile"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ _('Real Time Communication') }}</h3>
+                    <h3 class="info-title">{{ __('Real Time Communication') }}</h3>
                     <p class="description">
-                        {{ _('We\'ve developed the website with real time chat and voice call.') }}
+                        {{ __('We\'ve developed the website with real time chat and voice call.') }}
                     </p>
                 </div>
             </div>
@@ -30,9 +30,9 @@
                     <i class="tim-icons icon-email-85"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ _('Email Campaign') }}</h3>
+                    <h3 class="info-title">{{ __('Email Campaign') }}</h3>
                     <p class="description">
-                        {{ _('There is also a Fully Customizable Email.') }}
+                        {{ __('There is also a Fully Customizable Email.') }}
                     </p>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                                     <i class="tim-icons icon-bank"></i>
                                 </div>
                             </div>
-                            <input type="text" name="company name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ _('Company Name') }}" value="{{ old('name') }}">
+                            <input type="text" name="company name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Company Name') }}" value="{{ old('name') }}">
                             @include('alerts.feedback', ['field' => 'name'])
                         </div> -->
                         <div class="input-group{{ $errors->has('name') ? ' has-danger' : '' }}">
@@ -62,7 +62,7 @@
                                     <i class="tim-icons icon-single-02"></i>
                                 </div>
                             </div>
-                            <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ _('Name') }}" value="{{ old('name') }}">
+                            <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('name') }}">
                             @include('alerts.feedback', ['field' => 'name'])
                         </div>
                         <div class="input-group{{ $errors->has('companyname') ? ' has-danger' : '' }}">
@@ -71,7 +71,7 @@
                                     <i class="tim-icons icon-chart-bar-32"></i>
                                 </div>
                             </div>
-                            <input type="text" name="companyname" class="form-control{{ $errors->has('companyname') ? ' is-invalid' : '' }}" placeholder="{{ _('Company Name') }}" value="{{ old('Company name') }}">
+                            <input type="text" name="companyname" class="form-control{{ $errors->has('companyname') ? ' is-invalid' : '' }}" placeholder="{{ __('Company Name') }}" value="{{ old('Company name') }}">
                             @include('alerts.feedback', ['field' => 'Company name'])
                         </div>
                         <div class="input-group{{ $errors->has('usertype') ? ' has-danger' : '' }}">
@@ -95,7 +95,7 @@
                                     <i class="tim-icons icon-email-85"></i>
                                 </div>
                             </div>
-                            <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ _('Email') }}" value="{{ old('email') }}">
+                            <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}" value="{{ old('email') }}">
                             @include('alerts.feedback', ['field' => 'email'])
                         </div>
                         <div class="input-group{{ $errors->has('password') ? ' has-danger' : '' }}">
@@ -104,7 +104,7 @@
                                     <i class="tim-icons icon-lock-circle"></i>
                                 </div>
                             </div>
-                            <input type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ _('Password') }}">
+                            <input type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('Password') }}">
                             @include('alerts.feedback', ['field' => 'password'])
                         </div>
                         <div class="input-group">
@@ -113,21 +113,21 @@
                                     <i class="tim-icons icon-lock-circle"></i>
                                 </div>
                             </div>
-                            <input type="password" name="password_confirmation" class="form-control" placeholder="{{ _('Confirm Password') }}">
+                            <input type="password" name="password_confirmation" class="form-control" placeholder="{{ __('Confirm Password') }}">
                         </div>
                         <div class="form-check text-left {{ $errors->has('password') ? ' has-danger' : '' }}">
                             <label class="form-check-label">
                                 <input class="form-check-input {{ $errors->has('agree_terms_and_conditions') ? ' is-invalid' : '' }}" name="agree_terms_and_conditions"  type="checkbox"  {{ old('agree_terms_and_conditions') ? 'checked' : '' }}>
                                 <span class="form-check-sign"></span>
-                                {{ _('I agree to the') }}
-                                <a href="#">{{ _('terms and conditions') }}</a>.
+                                {{ __('I agree to the') }}
+                                <a href="#">{{ __('terms and conditions') }}</a>.
                                 @include('alerts.feedback', ['field' => 'agree_terms_and_conditions'])
                             </label>
                         </div>
                         
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-fill btn-success btn-round btn-lg">{{ _('Get Started') }}</button>
+                        <button type="submit" class="btn btn-fill btn-success btn-round btn-lg">{{ __('Get Started') }}</button>
                     </div>
                 </form>
             </div>
