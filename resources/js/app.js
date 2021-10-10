@@ -56,7 +56,7 @@ window.Echo = new Echo({
     key: process.env.MIX_PUSHER_APP_KEY,
     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 });
-
+console.log(process.env.MIX_PUSHER_APP_KEY)
 const app = new Vue({
     el: '#app32'
 });
