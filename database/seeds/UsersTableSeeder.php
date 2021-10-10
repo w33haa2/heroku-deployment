@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        Place::create([
+        User::create([
             'name' => 'Admin Admin',
             'email' => 'admin@white.com',
             'user_type' => 'admin',
