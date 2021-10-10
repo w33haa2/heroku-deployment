@@ -15,7 +15,6 @@ class AlterMessageTable extends Migration
     {
         Schema::table('messages', function (Blueprint $table) {
             $table->integer('user_id')->nullable()->change();
-            $table->string('sender');
         });
     }
 
@@ -26,10 +25,6 @@ class AlterMessageTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasColumn('messages', 'sender')){
-            Schema::table('messages', function (Blueprint $table){
-                $table->dropColumn('sender');
-            });
-        }
+        
     }
 }
