@@ -15,27 +15,27 @@ class CampaignSeeder extends Seeder
             [
                 'name' => 'Hardware Email Template',
                 'subject' => 'Promotion',
-                'contact' => 'Hello',
+                'message' => 'Hello',
             ],
             [
                 'name' => 'IT Email Template',
                 'subject' => 'Promotion',
-                'contact' => 'Hello',
+                'message' => 'Hello',
             ],
             [
                 'name' => 'Test Email Template',
                 'subject' => 'Promotion',
-                'contact' => 'Hello',
+                'message' => 'Hello',
             ],
             [
                 'name' => 'Jersey Promotion',
                 'subject' => 'Promotion',
-                'contact' => 'Hello',
+                'message' => 'Hello',
             ],
             [
                 'name' => 'Frogkaffee',
                 'subject' => 'Frogkaffee',
-                'contact' => 'Hello',
+                'message' => 'Hello',
             ],
         ];
         foreach($arr as $i => $value) {
