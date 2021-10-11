@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\EmailCampaign;
-class ProspectSeeder extends Seeder
+class CampaignSeeder extends Seeder
 {
     /**
      * Run the database seeds.
