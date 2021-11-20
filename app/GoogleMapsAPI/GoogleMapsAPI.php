@@ -11,7 +11,7 @@ class GoogleMapsAPI
     private $url3 = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=7.199001,125.454941&radius=2000&type=establishment&keyword=hardware&key=AIzaSyBK2CqoZPWfpLOHcVrjFWb6cOxPqK6x-Mo";
     private $url4 = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=250&photoreference=CmRaAAAAZuALLBbnpYg4pje5839GPT26ecBKUIGVZwQgQJXwOrnHRqJ55K_56EC0W6qfLtdMuJ5fbMb3rIa8klyABHuRQt4nlBNGPMaiPShtB4AhPMuVHYZFgAUufsIYNbQgVqH5EhBMIGUTKpeKno8iQoTtHti2GhS98eVFhQAY_nWsgD-jt5Y8nlS2Tg&key=AIzaSyBK2CqoZPWfpLOHcVrjFWb6cOxPqK6x-Mo";
     
-    const KEY = 'AIzaSyAmmMra8C4anJR1jVRL64vifvZvNGk1Hb0';
+    const KEY = 'AIzaSyBXp0FDU_TwLAJAiDjjs5B4SH17aZID0DA';  
     const BASE_URL = 'https://maps.googleapis.com/maps/api/place';
     const LOCATION_QUERY = 'location=7.199001,125.454941&radius=2500';
     const CONTACT_QUERY = 'fields=formatted_phone_number';
@@ -50,6 +50,7 @@ class GoogleMapsAPI
             self::SEARCH_NEARBY, self::LOCATION_QUERY, 
             $this->generateKeywords($type, $keyword)
         );
+
         // $client = new \GuzzleHttp\Client();
         // $response = $client->request('GET', $this->url3);
         
