@@ -80,7 +80,7 @@
                                     <i class="tim-icons icon-single-02"></i>
                                 </div>
                             </div>
-                            <select name="usertype" class="form-control{{ $errors->has('usertype') ? ' is-invalid' : '' }}" id="sel1">
+                            <select name="user_type" class="form-control{{ $errors->has('usertype') ? ' is-invalid' : '' }}" id="sel1">
                                 <option value="Admin">Admin</option>
                                 <option value="Agent">Agent</option>
                             </select>
