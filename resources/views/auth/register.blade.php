@@ -45,7 +45,7 @@
                 </div>
                 <form class="form" method="post" action="{{ route('register') }}">
                     @csrf
-
+                    <input type="hidden" value="Agent" name="user_type">
                     <div class="card-body">
                         <!-- <div class="input-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                             <div class="input-group-prepend">
@@ -74,21 +74,6 @@
                             <input type="text" name="companyname" class="form-control{{ $errors->has('companyname') ? ' is-invalid' : '' }}" placeholder="{{ __('Company Name') }}" value="{{ old('Company name') }}">
                             @include('alerts.feedback', ['field' => 'Company name'])
                         </div>
-                        <div class="input-group{{ $errors->has('usertype') ? ' has-danger' : '' }}">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <i class="tim-icons icon-single-02"></i>
-                                </div>
-                            </div>
-                            <select name="user_type" class="form-control{{ $errors->has('usertype') ? ' is-invalid' : '' }}" id="sel1">
-                                <option value="Admin">Admin</option>
-                                <option value="Agent">Agent</option>
-                            </select>
-                            @include('alerts.feedback', ['field' => 'UserType'])
-                        </div>
-
-                        
-
                         <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
@@ -124,7 +109,7 @@
                                 @include('alerts.feedback', ['field' => 'agree_terms_and_conditions'])
                             </label>
                         </div>
-                        
+
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-fill btn-success btn-round btn-lg">{{ __('Get Started') }}</button>
