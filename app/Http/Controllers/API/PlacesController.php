@@ -19,19 +19,19 @@ class PlacesController extends Controller
     }
 
     public function getContact($place_id) {
-        
+
         $results = new GoogleMapsAPI();
         echo $results->getContact($place_id);
     }
 
     public function getPhoto($photo_ref) {
-        
+
         $results = new GoogleMapsAPI();
         echo $results->getPhoto($photo_ref);
     }
 
     public function contacted($id)
-    {  
+    {
         $place = Place::where('name', '=', $id)->first();
         $place->status = 1;
         $place->save();
@@ -47,16 +47,16 @@ class PlacesController extends Controller
         // echo $msg;
 
         Mail::to($to)->send(new TestEmail($data));
-                
-        $sid    = "ACcd4f21caa8a689260c3acc3df2f535c0";
-        $token  = "b0719208d2ed074a5d6071ccc96c23f3";
-
-        $twilio = new Client($sid, $token);
-
-        $message = $twilio->messages 
-            ->create("+639359186078", //to
-                    ["from" => "+18148930541", "body" => $data['message']]
-            );
+// TODO: NEED TO ADD UPDATED TWILIO API KEYS
+//        $sid    = "ACcd4f21caa8a689260c3acc3df2f535c0";
+//        $token  = "b0719208d2ed074a5d6071ccc96c23f3";
+//
+//        $twilio = new Client($sid, $token);
+//
+//        $message = $twilio->messages
+//            ->create("+639359186078", //to
+//                    ["from" => "+18148930541", "body" => $data['message']]
+//            );
 
         //print($message->sid);
 
