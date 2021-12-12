@@ -29,7 +29,7 @@
             <span class="text-muted" v-if="activeUser" >{{ activeUser.name }} is typing...</span>
        </div>
 
-        <div class="col-4">
+        <!-- <div class="col-4">
             <div class="card card-default">
                 <div class="card-header">Active Users</div>
                 {{ users }}
@@ -41,7 +41,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
 
    </div>
 </template>
@@ -98,8 +98,6 @@ export default {
         fetchMessages() {
             axios.get('messages').then(response => {
                 this.messages = response.data;
-                console.log(response)
-                console.log(this.messages)
             })
         },
 
