@@ -7,8 +7,11 @@
                <div class="card-body p-0">
                    <ul class="list-unstyled" style="height:300px; overflow-y:scroll" v-chat-scroll>
                        <li class="p-2" v-for="(message, index) in messages" :key="index" >
-                           <strong>{{ message.user.name }}</strong>
-                           {{ message.message }}
+                           <template v-if="messages.length > 0">
+                                <strong>{{ message.user.name }}</strong>
+                                {{ message.message }}
+                           </template>
+                           
                        </li>
                    </ul>
                </div>
@@ -29,7 +32,7 @@
             <div class="card card-default">
                 <div class="card-header">Active Users</div>
                 <div class="card-body">
-                    <ul>
+                    <ul v-if="users.length > 0">
                         <li class="py-2" v-for="(user, index) in users" :key="index">
                             {{ user.name }}
                         </li>
