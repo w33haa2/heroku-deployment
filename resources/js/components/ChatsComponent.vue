@@ -65,19 +65,7 @@ export default {
         }
     },
     mounted() {
-        // this.fetchMessages();
-        this.messages = [
-            {
-                "id": 2,
-                "name": "Prospect w33haa2@gmail.com",
-                "companyname": null,
-                "email": "w33haa2@gmail.com",
-                "email_verified_at": null,
-                "created_at": "2021-10-10 08:09:52",
-                "updated_at": "2021-10-10 08:09:52",
-                "user_type": "prospect"
-            }
-        ]
+        this.fetchMessages();
 
         window.Echo.join('chat')
             .here(user => {
@@ -110,6 +98,8 @@ export default {
         fetchMessages() {
             axios.get('messages').then(response => {
                 this.messages = response.data;
+                console.log(response)
+                console.log(this.messages)
             })
         },
 
