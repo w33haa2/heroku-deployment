@@ -31,7 +31,6 @@
         <div class="col-4">
             <div class="card card-default">
                 <div class="card-header">Active Users</div>
-                {{ users }}
                 <div class="card-body">
                     <ul v-if="users.length > 0">
                         <li class="py-2" v-for="(user, index) in users" :key="index">
