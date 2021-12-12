@@ -5,7 +5,6 @@
            <div class="card card-default">
                <div class="card-header">Messages</div>
                <div class="card-body p-0">
-                   {{ messages }}
                    <ul class="list-unstyled" style="height:300px; overflow-y:scroll" v-chat-scroll>
                        <li class="p-2" v-for="(message, index) in messages" :key="index" >
                            <template v-if="messages.length > 0">
