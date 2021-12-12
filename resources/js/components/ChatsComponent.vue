@@ -6,7 +6,7 @@
                <div class="card-header">Messages</div>
                <div class="card-body p-0">
                    {{ messages }}
-                   <ul class="list-unstyled" style="height:300px; overflow-y:scroll" v-chat-scroll>
+                   <!-- <ul class="list-unstyled" style="height:300px; overflow-y:scroll" v-chat-scroll>
                        <li class="p-2" v-for="(message, index) in messages" :key="index" >
                            <template v-if="messages.length > 0">
                                 <strong>{{ message.user.name }}</strong>
@@ -14,7 +14,7 @@
                            </template>
                            
                        </li>
-                   </ul>
+                   </ul> -->
                </div>
 
                <input
@@ -26,7 +26,7 @@
                     placeholder="Enter your message..."
                     class="form-control">
            </div>
-            <span class="text-muted" v-if="activeUser" >{{ activeUser.name }} is typing...</span>
+            <!-- <span class="text-muted" v-if="activeUser" >{{ activeUser.name }} is typing...</span> -->
        </div>
 
         <!-- <div class="col-4">
