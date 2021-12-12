@@ -64,7 +64,7 @@ export default {
             typingTimer: false,
         }
     },
-    mounted() {
+    created() {
         this.fetchMessages();
 
         window.Echo.join('chat')
