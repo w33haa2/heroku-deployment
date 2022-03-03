@@ -38,7 +38,7 @@ class LoginController extends Controller
     }
 
     public function redirectTo() {
-        $role = Auth::user()->user_type;
+        $role = Auth::user()->usertype;
         switch ($role) {
             case 'admin':
                 return '/home';

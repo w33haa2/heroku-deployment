@@ -5,7 +5,7 @@
             <a href="#" class="simple-text logo-normal">{{ __('Business DashBoard') }}</a>
         </div>
         <ul class="nav">
-            @if(Auth::user()->user_type == 'admin')
+            @if(Auth::user()->usertype == 'admin')
             <li @if ($pageSlug ?? '' == 'dashboard') class="active" @endif>
                 <a href="{{ route('home') }}">
                     <i class="tim-icons icon-chart-pie-36"></i>
